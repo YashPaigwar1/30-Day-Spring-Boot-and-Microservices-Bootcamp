@@ -1,1 +1,75 @@
+Day 1 Notes: PayPal Integration
 
+Day 1: Project Overview & The PayPal Integration Flow
+Session Goal
+Today's focus was on understanding the "why" behind this project by analyzing the current IT job market and getting a high-level architectural overview of the PayPal Payment Integration system we will be building.
+
+Key Takeaways
+The Market Demands Project-Ready Developers: Companies need developers who can contribute to real projects quickly. Simply knowing a language isn't enough; they want to see practical application and an understanding of industry tools and processes.
+
+This Project Bridges the Gap: This bootcamp is designed to provide the skills and experience equivalent to a developer with 1-2 years of experience by building a production-style application.
+
+Core Concepts: The PayPal Ecosystem
+Before diving into the flow, we must understand the key players:
+
+End Customer: The person buying a product online.
+
+Merchant System: The e-commerce website selling the product (e.g., a site selling T-shirts). This system manages products, inventory, and the user-facing website.
+
+Payment Integration System: This is what we are building. A specialized backend system whose only job is to handle all communications with external payment providers.
+
+PSP (Payment Service Provider): An external, third-party company that processes the payment. In our case, this is PayPal.
+
+The Technical Flow: A High-Level View
+The process of a single PayPal transaction is a complex sequence of interactions between all these systems. We can break it down into two main use cases.
+
+Use Case 1: Creating the Order (Getting the Pop-up to Appear)
+This happens when the customer clicks the "Pay with PayPal" button.
+
+Button Display: The Merchant's front-end uses PayPal's JavaScript (JS) SDK to display the official PayPal button.
+
+User Click: The customer clicks the button.
+
+The "Create Order" Dance: This initiates a chain reaction:
+
+The PayPal JS SDK calls the Merchant's front-end.
+
+The Merchant's front-end calls its own backend.
+
+The Merchant's backend calls our Payment Integration System's create order endpoint.
+
+Our system then calls PayPal's official create order API.
+
+Order ID Returned: PayPal's API returns a unique orderId. This ID travels all the way back through the chain to the PayPal JS SDK.
+
+Pop-up Launch: Once the SDK receives the orderId, it successfully launches the PayPal login/payment pop-up for the customer.
+
+Use Case 2: Capturing the Payment (Completing the Purchase)
+This happens after the customer approves the payment inside the PayPal pop-up.
+
+User Approval: The customer logs in and confirms the payment in the pop-up.
+
+The "Capture Order" Dance: This triggers another chain reaction:
+
+The PayPal pop-up informs the PayPal JS SDK of the approval.
+
+The JS SDK calls the Merchant's front-end.
+
+The Merchant's front-end calls its own backend.
+
+The Merchant's backend calls our Payment Integration System's capture order endpoint.
+
+Our system then calls PayPal's official capture order API to finalize the transaction.
+
+Confirmation: PayPal confirms the payment is complete. This success message travels back through the chain.
+
+Success Message: The customer is redirected to a "Thank You" or "Order Successful" page on the Merchant's site.
+
+Our Role as Backend Developers
+Our primary responsibility is to build the Payment Integration System. Specifically for this flow, we need to create and manage two core API endpoints:
+
+/create-order
+
+/capture-order
+
+While it sounds simple, building these to production standards with proper security, error handling, logging, and scalability will be our focus for the next 30 days.
