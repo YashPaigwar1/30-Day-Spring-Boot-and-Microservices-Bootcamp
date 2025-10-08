@@ -1,7 +1,7 @@
-# 30DayJava-Bootcamp
-30-Day Spring Boot & Microservices Bootcamp
-Welcome! This is a 30-day personal bootcamp designed to master Java Spring Boot and Microservices through a real-world PayPal Payment Integration project. I am documenting my entire learning journey here.
 
+# 30-Day Spring Boot & Microservices Bootcamp
+Welcome! This is a 30-day personal bootcamp designed to master Java Spring Boot and Microservices through a real-world PayPal Payment Integration project. I am documenting my entire learning journey here.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Prerequisites
 Strong understanding of Core Java (Java 17+)
 Basic knowledge of Maven
@@ -18,3 +18,26 @@ Docker
 AWS
 JUnit & Mockito
 Agile & Jira
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bootcamp Schedule & Progress
+Day 1
+Topic: Project Overview: The PayPal Integration Flow
+Status: ✅ Complete
+
+2
+
+Your First Spring Boot App & Core Concepts
+
+In Progress
+
+3
+
+Building a Simple REST API (CRUD)
+-----
+----
+---
+--
+
+Final Deployment & Project Wrap-up
