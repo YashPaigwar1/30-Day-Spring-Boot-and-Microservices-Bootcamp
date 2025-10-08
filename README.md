@@ -1,6 +1,8 @@
 
 # 30-Day Spring Boot & Microservices Bootcamp
+
 Welcome! This is a 30-day personal bootcamp designed to master Java Spring Boot and Microservices through a real-world PayPal Payment Integration project. I am documenting my entire learning journey here.
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Prerequisites
 Strong understanding of Core Java (Java 17+)
@@ -32,12 +34,5 @@ Your First Spring Boot App & Core Concepts
 
 In Progress
 
-3
-
-Building a Simple REST API (CRUD)
------
-----
----
---
 
 Final Deployment & Project Wrap-up
