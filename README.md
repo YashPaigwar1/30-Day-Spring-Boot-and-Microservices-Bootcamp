@@ -25,14 +25,8 @@ Agile & Jira
 
 Bootcamp Schedule & Progress
 Day 1
-Topic: Project Overview: The PayPal Integration Flow
-Status: ✅ Complete
-
-2
-
-Your First Spring Boot App & Core Concepts
-
-In Progress
+**Topic:** Project Overview: The PayPal Integration Flow
+ **Status:** ✅ Complete
 
 
 Final Deployment & Project Wrap-up
